@@ -5,6 +5,7 @@ import { api } from "~/utils/api";
 
 // import Image from "next/image";
 import Head from "next/head";
+import Image from "next/image";
 // import { useState } from "react";
 const CreatePostWizard = () => {
   const { user } = useUser();
@@ -12,8 +13,13 @@ const CreatePostWizard = () => {
   if (!user) return null;
 
   return (
-    <div>
-      <img src={user.profileImageUrl} alt="Profile Image" />
+    <div className='flex gap-3'>
+      <Image
+        src={user.profileImageUrl}
+        alt="Profile Image"
+        className="h-14 w-14 rounded-full"
+      />
+      <input placeholder="Type some emojis" className="bg-transparent " />
     </div>
   );
 };
