@@ -46,7 +46,7 @@ const Home: NextPage = () => {
                 <SignInButton />
               </div>
             )}
-            {!user.isSignedIn && <CreatePostWizard />}
+            {user.isSignedIn && <CreatePostWizard />}
           </div>
           <div className="flex flex-col">
             {[...data, ...data]?.map((post) => (
