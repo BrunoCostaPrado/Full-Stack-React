@@ -9,10 +9,10 @@ import Head from "next/head";
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ClerkProvider {...pageProps}>
-      <Head>
+      {/* <Head>
         
-      </Head>
-      <Component {...pageProps} />;
+      </Head> */}
+      <Component {...pageProps} />
     </ClerkProvider>
   );
 };
