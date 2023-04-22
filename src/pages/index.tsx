@@ -1,14 +1,17 @@
-import { SignInButton, SignOutButton, useUser } from "@clerk/nextjs";
+/* eslint-disable @next/next/no-img-element */
+import { SignInButton, useUser } from "@clerk/nextjs";
 import { type NextPage } from "next";
 
 import { api } from "~/utils/api";
 
 // import Image from "next/image";
 import Head from "next/head";
-import Image from "next/image";
+// import Image from "next/image";
 // import { useState } from "react";
 const CreatePostWizard = () => {
   const { user } = useUser();
+
+  console.log(user);
 
   if (!user) return null;
 
